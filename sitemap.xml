@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://hawkacademy.github.io/</loc><lastmod>2026-10-01</lastmod></url>
-  <url><loc>https://hawkacademy.github.io/support.html</loc><lastmod>2026-10-01</lastmod></url>
-  <url><loc>https://hawkacademy.github.io/privacy.html</loc><lastmod>2026-10-01</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://hawkacademy.github.io/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hawkacademy.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hawkacademy.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hawkacademy.github.io/en/"/>
+  </url>
+  <url>
+    <loc>https://hawkacademy.github.io/en/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hawkacademy.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hawkacademy.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hawkacademy.github.io/en/"/>
+  </url>
+  <url>
+    <loc>https://hawkacademy.github.io/support.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hawkacademy.github.io/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hawkacademy.github.io/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hawkacademy.github.io/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://hawkacademy.github.io/en/support.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hawkacademy.github.io/support.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hawkacademy.github.io/en/support.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hawkacademy.github.io/en/support.html"/>
+  </url>
+  <url>
+    <loc>https://hawkacademy.github.io/privacy.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hawkacademy.github.io/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hawkacademy.github.io/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hawkacademy.github.io/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://hawkacademy.github.io/en/privacy.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://hawkacademy.github.io/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hawkacademy.github.io/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hawkacademy.github.io/en/privacy.html"/>
+  </url>
 </urlset>

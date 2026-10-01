@@ -1,8 +1,11 @@
 // Живое задание на главной: четыре задачи в формате ОГЭ, ответ в клетках бланка, разбор и 📏.
+// Язык берём из <html lang>: русская и английская версии главной.
 (function () {
   "use strict";
 
-  var tasks = {
+  var lang = document.documentElement.lang === "en" ? "en" : "ru";
+
+  var ru = {
     math: {
       number: "Задание 6",
       html: '<p>Найдите значение выражения <span class="expr"><span class="frac"><span>3</span><span>4</span></span> + <span class="frac"><span>7</span><span>20</span></span></span>.</p>',
@@ -49,6 +52,61 @@
       ruler: "📏 В бланк — десятичное число без основания: 177, а не 177₁₀."
     }
   };
+
+  var en = {
+    math: {
+      number: "Task 6",
+      html: '<p>Find the value of the expression <span class="expr"><span class="frac"><span>3</span><span>4</span></span> + <span class="frac"><span>7</span><span>20</span></span></span>.</p>',
+      cells: 8,
+      inputmode: "decimal",
+      hint: "A number. Write a fraction as a decimal.",
+      answers: ["1,1"],
+      solution: "Use the common denominator 20: 3/4 = 15/20. Then 15/20 + 7/20 = 22/20 = 1.1.",
+      ruler: "📏 The OGE answer sheet takes no common fractions: 22/20 is written as a decimal, 1,1 (Russian notation uses a decimal comma).",
+      normalize: function (v) { return v.replace(/\./g, ","); },
+      shown: "1.1"
+    },
+    russian: {
+      number: "Task 2",
+      html: "<p>Write out the grammatical basis (subject and predicate) of the Russian sentence:</p><p><b lang=\"ru\">К вечеру ветер стих.</b> <span>(“By evening the wind had died down.”)</span></p>",
+      cells: 12,
+      inputmode: "text",
+      hint: "Russian words, written together with no spaces or commas.",
+      answers: ["ветерстих"],
+      solution: "The subject is «ветер» (the wind), the predicate is «стих» (died down). «К вечеру» (by evening) is an adverbial and is not part of the basis.",
+      ruler: "📏 On the answer sheet the words are written together, with no space: ВЕТЕРСТИХ.",
+      spaced: "The words are right, but on the OGE sheet they are written together, without a space. With a space the answer does not count."
+    },
+    geography: {
+      number: "Task 14",
+      html: "<p>Which two of these regions of Russia border the Caspian Sea?</p>" +
+        '<ol class="task-options"><li>1) Republic of Kalmykia</li><li>2) Orenburg Oblast</li>' +
+        "<li>3) Astrakhan Oblast</li><li>4) Volgograd Oblast</li><li>5) Stavropol Krai</li></ol>",
+      cells: 4,
+      inputmode: "numeric",
+      hint: "Two digits in a row, in any order.",
+      answers: ["13", "31"],
+      solution: "Kalmykia (1) and Astrakhan Oblast (3) reach the Caspian Sea, and so does Dagestan. Orenburg and Volgograd Oblasts and Stavropol Krai do not reach the sea.",
+      ruler: "📏 Digits go in a row, with no commas or spaces: 13. The order does not matter here."
+    },
+    informatics: {
+      number: "Task 10",
+      html: '<p>Calculate the value of the expression:</p><p class="expr">101101<sub>2</sub> + 125<sub>8</sub> + 2F<sub>16</sub></p>' +
+        "<p>Write the answer as a decimal number, without the base.</p>",
+      cells: 6,
+      inputmode: "numeric",
+      hint: "Digits of a decimal number only.",
+      answers: ["177"],
+      solution: "101101₂ = 32 + 8 + 4 + 1 = 45. 125₈ = 1·64 + 2·8 + 5 = 85. 2F₁₆ = 2·16 + 15 = 47. Sum: 45 + 85 + 47 = 177.",
+      ruler: "📏 Write the decimal number without the base: 177, not 177₁₀."
+    }
+  };
+
+  var ui = {
+    ru: { ok: "Верно! Так и пишут в бланке.", almost: "Почти!", wrong: "Пока нет. Ответ: ", solved: "Разбор: ", howto: "Как решать: " },
+    en: { ok: "Correct! That is exactly how it goes on the answer sheet.", almost: "Almost!", wrong: "Not quite. The answer is ", solved: "Solution: ", howto: "How to solve it: " }
+  }[lang];
+  var tasks = lang === "en" ? en : ru;
 
   var tabs = Array.prototype.slice.call(document.querySelectorAll(".tab"));
   var numberEl = document.getElementById("task-number");
@@ -124,7 +182,7 @@
       resultEl.appendChild(e);
     }
     var sol = document.createElement("p");
-    sol.textContent = (ok ? "Разбор: " : "Как решать: ") + t.solution;
+    sol.textContent = (ok ? ui.solved : ui.howto) + t.solution;
     resultEl.appendChild(sol);
     var ruler = document.createElement("p");
     ruler.className = "ruler";
@@ -143,11 +201,11 @@
     }
     var value = t.normalize ? t.normalize(raw) : raw;
     if (t.answers.indexOf(value) !== -1) {
-      render(true, "Верно! Так и пишут в бланке.");
+      render(true, ui.ok);
     } else if (t.spaced && t.answers.indexOf(value.replace(/\s+/g, "")) !== -1) {
-      render(false, "Почти!", t.spaced);
+      render(false, ui.almost, t.spaced);
     } else {
-      render(false, "Пока нет. Ответ: " + t.answers[0].toUpperCase() + ".");
+      render(false, ui.wrong + (t.shown || t.answers[0].toUpperCase()) + ".");
     }
   });
 

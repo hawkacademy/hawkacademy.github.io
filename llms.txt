@@ -10,8 +10,16 @@
 - Информатика: 16 заданий, 2 ч 30 мин, 21 первичный балл. Часть 1 по сюжетам демоверсий 2020–2027; задания 11–16, которые на экзамене выполняют на компьютере, адаптированы для телефона; Робот с конструктором алгоритма; программы на Python, Паскале и алгоритмическом языке.
 - Обществознание и биология в приложении отмечены как «Скоро».
 
-## Страницы
+## Страницы (на русском)
 
 - [Главная](https://hawkacademy.github.io/): что умеет приложение, предметы, частые вопросы
 - [Поддержка](https://hawkacademy.github.io/support.html): как связаться и сообщить об ошибке в задании
 - [Политика конфиденциальности](https://hawkacademy.github.io/privacy.html): приложение не собирает и не передаёт персональные данные
+
+## In English
+
+Hawk Academy: OGE 2027 is an iPhone app (iOS 17 or later) for the OGE, the state exam students in Russia take at the end of 9th grade. It covers maths (25 tasks, 3 h 55 min, 31 points), Russian language (13 tasks, 3 h 55 min, 38 points), geography (30 tasks, 2 h 30 min, 31 points) and computer science (16 tasks, 2 h 30 min, 21 points). Tasks follow the FIPI demo versions 2020–2027; every task has a step-by-step solution; written answers come with model answers and FIPI criteria for self-assessment; full mock exams give a score and a grade. The app interface is in Russian, works offline, needs no account and keeps all data on the device. Developer: Hawk Academy, hawk.academy.education@gmail.com.
+
+- [Home (English)](https://hawkacademy.github.io/en/)
+- [Support (English)](https://hawkacademy.github.io/en/support.html)
+- [Privacy Policy (English)](https://hawkacademy.github.io/en/privacy.html)
