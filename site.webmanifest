@@ -1,0 +1,13 @@
+{
+  "name": "Hawk Academy: ОГЭ-2027",
+  "short_name": "ОГЭ-2027",
+  "lang": "ru",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#f6f8fd",
+  "theme_color": "#5b3fd9",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

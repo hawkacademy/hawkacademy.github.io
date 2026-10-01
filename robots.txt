@@ -1,0 +1,33 @@
+# Сайт открыт для поисковых систем и ИИ-ассистентов: чем точнее они прочитают
+# факты о тренажёре, тем вернее перескажут их ученикам и родителям.
+User-agent: *
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://hawkacademy.github.io/sitemap.xml

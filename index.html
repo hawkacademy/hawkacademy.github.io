@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тренажёр ОГЭ-2027 для iPhone — Hawk Academy</title>
+  <meta name="description" content="Тренажёр ОГЭ-2027 для 9 класса: математика, русский, география, информатика. Задания как в демоверсиях ФИПИ, разборы, шпаргалки и пробный вариант с отметкой.">
+  <link rel="canonical" href="https://hawkacademy.github.io/">
+  <meta name="theme-color" content="#f6f8fd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121232" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Hawk Academy">
+  <meta property="og:title" content="Hawk Academy: ОГЭ-2027 — тренажёр для 9 класса">
+  <meta property="og:description" content="Математика, русский язык, география и информатика. Задания как на ОГЭ, разборы, шпаргалки и пробный вариант с баллами и отметкой.">
+  <meta property="og:url" content="https://hawkacademy.github.io/">
+  <meta property="og:image" content="https://hawkacademy.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Hawk Academy: ОГЭ-2027 — тренажёр по математике, русскому, географии и информатике">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preload" href="assets/fonts/unbounded-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/golos-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://hawkacademy.github.io/#org",
+        "name": "Hawk Academy",
+        "url": "https://hawkacademy.github.io/",
+        "logo": "https://hawkacademy.github.io/assets/icon-512.png"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://hawkacademy.github.io/#site",
+        "name": "Hawk Academy: ОГЭ-2027",
+        "url": "https://hawkacademy.github.io/",
+        "inLanguage": "ru",
+        "publisher": { "@id": "https://hawkacademy.github.io/#org" }
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": "https://hawkacademy.github.io/#app",
+        "name": "Hawk Academy: ОГЭ-2027",
+        "alternateName": "ОГЭ-2027",
+        "description": "Тренажёр для подготовки к ОГЭ-2027 в 9 классе: математика, русский язык, география и информатика. Задания в формате демоверсий ФИПИ, разбор решения к каждому заданию, шпаргалки по номерам, развёрнутые ответы с эталоном и самооценкой по критериям ФИПИ, пробный вариант с баллами и отметкой.",
+        "operatingSystem": "iOS 17.0 или новее",
+        "applicationCategory": "EducationalApplication",
+        "inLanguage": "ru",
+        "image": "https://hawkacademy.github.io/assets/icon-512.png",
+        "url": "https://hawkacademy.github.io/",
+        "author": { "@id": "https://hawkacademy.github.io/#org" },
+        "publisher": { "@id": "https://hawkacademy.github.io/#org" },
+        "audience": {
+          "@type": "EducationalAudience",
+          "educationalRole": "student",
+          "audienceType": "Ученики 9 класса, которые готовятся к ОГЭ"
+        },
+        "about": [
+          { "@type": "Thing", "name": "ОГЭ по математике" },
+          { "@type": "Thing", "name": "ОГЭ по русскому языку" },
+          { "@type": "Thing", "name": "ОГЭ по географии" },
+          { "@type": "Thing", "name": "ОГЭ по информатике" }
+        ],
+        "featureList": [
+          "Тренировка по каждому номеру ОГЭ с новыми числами и разбором",
+          "Шпаргалки: алгоритм, лайфхаки, типичные ошибки, формулы и справка",
+          "Развёрнутые ответы: эталон, критерии ФИПИ и самооценка",
+          "Сжатое изложение с двумя прослушиваниями и паузой 5 минут",
+          "Пробный вариант с таймером, баллами и отметкой по шкале",
+          "Работает без интернета и без регистрации"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://hawkacademy.github.io/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "По каким предметам ОГЭ есть тренажёр?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Готовы математика (25 заданий), русский язык (13 заданий), география (30 заданий) и информатика (16 заданий). Обществознание и биология в приложении отмечены как «Скоро»." }
+          },
+          {
+            "@type": "Question",
+            "name": "Задания такие же, как на ОГЭ?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Задания составлены по демоверсиям, спецификациям и кодификаторам ФИПИ 2020–2027 годов. Формат ответа такой же, как в бланке: число, слово или цифры подряд, без пробелов. Числа и варианты каждый раз новые." }
+          },
+          {
+            "@type": "Question",
+            "name": "Как проверяются изложение, сочинение и задачи второй части?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Автоматически их честно проверить нельзя, поэтому после ответа приложение показывает эталон и критерии ФИПИ, а ученик оценивает себя сам: 0, 1 или 2 балла по каждому критерию." }
+          },
+          {
+            "@type": "Question",
+            "name": "Нужен ли интернет и регистрация?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Нет. Приложение работает без интернета и без аккаунта. Статистика, черновики сочинений и история вариантов хранятся только на телефоне." }
+          },
+          {
+            "@type": "Question",
+            "name": "На каких устройствах работает приложение?",
+            "acceptedAnswer": { "@type": "Answer", "text": "На iPhone с iOS 17 или новее." }
+          },
+          {
+            "@type": "Question",
+            "name": "Как ставится отметка в пробном варианте?",
+            "acceptedAnswer": { "@type": "Answer", "text": "По сумме первичных баллов и шкале ФИПИ с дополнительными условиями: в математике нужно не меньше 2 баллов за геометрию, в русском языке для «4» и «5» нужен минимум баллов за грамотность." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="Hawk Academy — на главную">
+        <img src="assets/icon-96.png" alt="" width="36" height="36">
+        Hawk Academy
+      </a>
+      <nav class="site-nav" aria-label="Разделы">
+        <ul>
+          <li><a href="#subjects">Предметы</a></li>
+          <li class="nav-optional"><a href="#how">Как устроено</a></li>
+          <li class="nav-optional"><a href="#faq">Вопросы</a></li>
+          <li><a href="support.html">Поддержка</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div>
+          <h1 id="hero-title" class="hero-title">
+            <span class="sr-only">Тренажёр ОГЭ-2027 для 9 класса</span>
+            <span class="line" aria-hidden="true">Тренажёр</span>
+            <span class="cells hero-cells" aria-hidden="true">
+              <span class="cell" style="--i:0"><span>О</span></span>
+              <span class="cell" style="--i:1"><span>Г</span></span>
+              <span class="cell" style="--i:2"><span>Э</span></span>
+              <span class="cell is-dash" style="--i:3"><span>-</span></span>
+              <span class="cell" style="--i:4"><span>2</span></span>
+              <span class="cell" style="--i:5"><span>0</span></span>
+              <span class="cell" style="--i:6"><span>2</span></span>
+              <span class="cell" style="--i:7"><span>7</span></span>
+            </span>
+            <span class="line-small" aria-hidden="true">для 9 класса, в iPhone</span>
+          </h1>
+          <p class="hero-lead">
+            Математика, русский язык, география и информатика. Задания как в демоверсиях ФИПИ, разбор к каждому,
+            шпаргалки по номерам и пробный вариант с баллами и отметкой.
+          </p>
+          <div class="hero-actions">
+            <div class="store-badge" role="note" aria-label="Скоро в App Store">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.37 12.6c-.02-2.16 1.77-3.2 1.85-3.25-1-1.47-2.57-1.67-3.13-1.7-1.33-.13-2.6.79-3.28.79-.68 0-1.72-.77-2.83-.75-1.45.02-2.8.85-3.55 2.15-1.52 2.63-.39 6.52 1.09 8.66.72 1.04 1.58 2.21 2.71 2.17 1.09-.04 1.5-.7 2.82-.7 1.31 0 1.69.7 2.84.68 1.17-.02 1.91-1.06 2.63-2.11.83-1.21 1.17-2.38 1.19-2.44-.03-.01-2.28-.88-2.3-3.5zM14.2 6.25c.6-.73 1.01-1.74.9-2.75-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.07 1.96-.5 2.56-1.22z"/></svg>
+              <span><small>Скоро</small><strong>в App Store</strong></span>
+            </div>
+            <a class="btn btn-ghost" href="#subjects">Что внутри</a>
+          </div>
+          <ul class="hero-facts" aria-label="Коротко">
+            <li>iOS 17 и новее</li>
+            <li>Работает без интернета</li>
+            <li>Без регистрации</li>
+          </ul>
+        </div>
+
+        <div class="try" id="try" aria-labelledby="try-title">
+          <div class="try-head">
+            <h2 id="try-title">Попробуйте задание</h2>
+            <p>Так выглядит тренировка в приложении</p>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Предмет">
+            <button class="tab" role="tab" type="button" data-subject="math" aria-selected="true" aria-controls="task">Математика</button>
+            <button class="tab" role="tab" type="button" data-subject="russian" aria-selected="false" aria-controls="task" tabindex="-1">Русский</button>
+            <button class="tab" role="tab" type="button" data-subject="geography" aria-selected="false" aria-controls="task" tabindex="-1">География</button>
+            <button class="tab" role="tab" type="button" data-subject="informatics" aria-selected="false" aria-controls="task" tabindex="-1">Информатика</button>
+          </div>
+
+          <div class="task" id="task" role="tabpanel">
+            <span class="task-number" id="task-number">Задание 6</span>
+            <div class="task-text" id="task-text">
+              <p>Найдите значение выражения <span class="expr"><span class="frac"><span>3</span><span>4</span></span> + <span class="frac"><span>7</span><span>20</span></span></span>.</p>
+            </div>
+            <form class="answer" id="answer-form" novalidate>
+              <label for="answer-input">Ответ</label>
+              <div class="answer-row">
+                <div class="answer-cells" id="answer-cells">
+                  <input id="answer-input" name="answer" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" inputmode="decimal" maxlength="8" aria-describedby="format-hint">
+                </div>
+                <button class="btn btn-primary" type="submit">Проверить</button>
+              </div>
+              <p class="format-hint" id="format-hint">Число. Дробь записывайте десятичной, через запятую.</p>
+            </form>
+            <div class="result" id="result" role="status" aria-live="polite" hidden></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="subjects" aria-labelledby="subjects-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="subjects-title">Четыре предмета ОГЭ</h2>
+          <p>Все номера экзамена, от первого до последнего. Время и баллы — как на настоящем ОГЭ.</p>
+        </div>
+        <table class="subjects">
+          <caption class="sr-only">Предметы, число заданий, время и максимальный балл</caption>
+          <thead>
+            <tr>
+              <th scope="col">Предмет</th>
+              <th scope="col">Заданий</th>
+              <th scope="col">Время</th>
+              <th scope="col">Баллов</th>
+              <th scope="col">Что есть в приложении</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-subject="math">
+              <th scope="row"><h3>Математика</h3></th>
+              <td class="num" data-label="Заданий">25</td>
+              <td class="num" data-label="Время">3 ч 55 мин</td>
+              <td class="num" data-label="Баллов">31</td>
+              <td>
+                <ul>
+                  <li>Практическая задача 1–5: сюжеты «Шины» и «Участки» с рисунками</li>
+                  <li>Задания 6–19 с новыми числами и чертежами, разбор к каждому</li>
+                  <li>Часть 2: автопроверка ответа, эталон и 16 задач на доказательство</li>
+                </ul>
+              </td>
+            </tr>
+            <tr data-subject="russian">
+              <th scope="row"><h3>Русский язык</h3></th>
+              <td class="num" data-label="Заданий">13</td>
+              <td class="num" data-label="Время">3 ч 55 мин</td>
+              <td class="num" data-label="Баллов">38</td>
+              <td>
+                <ul>
+                  <li>Сжатое изложение: текст звучит два раза, между ними пауза 5 минут</li>
+                  <li>Задания 2–12 с ответом как в бланке, слитно и без пробелов</li>
+                  <li>Сочинение 13.1–13.3: 36 тем, эталон и самооценка с грамотностью</li>
+                </ul>
+              </td>
+            </tr>
+            <tr data-subject="geography">
+              <th scope="row"><h3>География</h3></th>
+              <td class="num" data-label="Заданий">30</td>
+              <td class="num" data-label="Время">2 ч 30 мин</td>
+              <td class="num" data-label="Баллов">31</td>
+              <td>
+                <ul>
+                  <li>Только типовые вопросы демоверсий ФИПИ — их можно выучить</li>
+                  <li>Карты погоды, топокарта, профиль рельефа и климатограммы</li>
+                  <li>Справка вместо атласа: координаты, часовые пояса, 52 региона</li>
+                </ul>
+              </td>
+            </tr>
+            <tr data-subject="informatics">
+              <th scope="row"><h3>Информатика</h3></th>
+              <td class="num" data-label="Заданий">16</td>
+              <td class="num" data-label="Время">2 ч 30 мин</td>
+              <td class="num" data-label="Баллов">21</td>
+              <td>
+                <ul>
+                  <li>Часть 1 по сюжетам демоверсий 2020–2027</li>
+                  <li>Задания «на компьютере» 11–16 переделаны под телефон</li>
+                  <li>Робот с конструктором алгоритма, программы на Python, Паскале и алгоритмическом языке</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="soon">Обществознание и биология в приложении уже отмечены — они на очереди.</p>
+      </div>
+    </section>
+
+    <section class="section" id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="how-title">Как готовиться</h2>
+          <p>От одного номера до целого варианта — в том же порядке, в каком растёт уверенность.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Выберите номер</h3>
+            <p>Каждый раз новая задача того же типа, что на экзамене, — с другими числами или вариантами ответа.</p>
+          </li>
+          <li>
+            <h3>Проверьте ответ</h3>
+            <p>Ответ проверяется сразу. Дальше — разбор по шагам и подсказка 📏, если в формате ответа есть подвох.</p>
+          </li>
+          <li>
+            <h3>Загляните в шпаргалку</h3>
+            <p>По каждому номеру: как решать, лайфхаки, типичные ошибки и формулы. Открывается прямо из задачи.</p>
+          </li>
+          <li>
+            <h3>Напишите пробный ОГЭ</h3>
+            <p>Полный вариант с таймером. В конце — баллы, отметка по шкале и история всех попыток.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="long" aria-labelledby="long-title">
+      <div class="wrap split">
+        <div class="split-text">
+          <h2 id="long-title">Развёрнутые ответы — по критериям ФИПИ</h2>
+          <p>
+            Изложение, сочинение и задачи второй части нельзя честно проверить автоматически. Поэтому после ответа
+            приложение показывает эталон и критерии ФИПИ, а вы ставите себе баллы сами — так же, как будет ставить эксперт.
+          </p>
+          <p>
+            Так становится видно, за что снимают баллы, ещё до экзамена. А в изложении и сочинении после самопроверки
+            подсвечиваются слова с возможными ошибками — подсказка к критерию грамотности.
+          </p>
+        </div>
+        <figure class="criteria" aria-label="Пример самооценки сочинения">
+          <figcaption class="criteria-title">Сочинение 13.2 — самооценка</figcaption>
+          <div class="criterion">
+            <p class="criterion-name"><strong>СК1</strong>Ответ на вопрос темы</p>
+            <div class="score" aria-label="Выбран 1 балл из 1"><span>0</span><span class="is-picked">1</span></div>
+          </div>
+          <div class="criterion">
+            <p class="criterion-name"><strong>СК2</strong>Два примера из текста и пояснения к ним</p>
+            <div class="score" aria-label="Выбрано 3 балла из 4"><span>0</span><span>1</span><span>2</span><span class="is-picked">3</span><span>4</span></div>
+          </div>
+          <div class="criterion">
+            <p class="criterion-name"><strong>СК3</strong>Логичность речи</p>
+            <div class="score" aria-label="Выбрано 2 балла из 2"><span>0</span><span>1</span><span class="is-picked">2</span></div>
+          </div>
+          <div class="criterion">
+            <p class="criterion-name"><strong>СК4</strong>Композиция</p>
+            <div class="score" aria-label="Выбран 1 балл из 1"><span>0</span><span class="is-picked">1</span></div>
+          </div>
+          <div class="criteria-total"><span>Содержание сочинения</span><span>7 из 8</span></div>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="privacy-facts" aria-labelledby="privacy-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="privacy-title">Всё остаётся на телефоне</h2>
+        </div>
+        <ul class="facts">
+          <li><strong>Без интернета</strong><span>Можно заниматься в метро, на даче и в самолёте. Приложению сеть не нужна.</span></li>
+          <li><strong>Без аккаунта</strong><span>Не нужно вводить имя, почту или телефон. Открыли — и решаете.</span></li>
+          <li><strong>Без слежки</strong><span>Нет рекламы и аналитики. Статистика и черновики сохраняются только у вас. <a href="privacy.html">Политика конфиденциальности</a></span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="faq-title">Частые вопросы</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>По каким предметам ОГЭ есть тренажёр?</summary>
+            <div><p>Готовы математика (25 заданий), русский язык (13 заданий), география (30 заданий) и информатика (16 заданий). Обществознание и биология в приложении отмечены как «Скоро».</p></div>
+          </details>
+          <details>
+            <summary>Задания такие же, как на ОГЭ?</summary>
+            <div><p>Задания составлены по демоверсиям, спецификациям и кодификаторам ФИПИ 2020–2027 годов. Формат ответа такой же, как в бланке: число, слово или цифры подряд, без пробелов. Числа и варианты каждый раз новые.</p></div>
+          </details>
+          <details>
+            <summary>Как проверяются изложение, сочинение и задачи второй части?</summary>
+            <div><p>Автоматически их честно проверить нельзя, поэтому после ответа приложение показывает эталон и критерии ФИПИ, а вы оцениваете себя сами: 0, 1 или 2 балла по каждому критерию.</p></div>
+          </details>
+          <details>
+            <summary>Нужен ли интернет и регистрация?</summary>
+            <div><p>Нет. Приложение работает без интернета и без аккаунта. Статистика, черновики сочинений и история вариантов хранятся только на телефоне.</p></div>
+          </details>
+          <details>
+            <summary>На каких устройствах работает приложение?</summary>
+            <div><p>На iPhone с iOS 17 или новее.</p></div>
+          </details>
+          <details>
+            <summary>Как ставится отметка в пробном варианте?</summary>
+            <div><p>По сумме первичных баллов и шкале ФИПИ с дополнительными условиями: в математике нужно не меньше 2 баллов за геометрию, в русском языке для «4» и «5» нужен минимум баллов за грамотность.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta" aria-labelledby="cta-title">
+      <div class="wrap">
+        <h2 id="cta-title">Остался вопрос или нашли ошибку в задании?</h2>
+        <p>Напишите нам — ответим и поправим.</p>
+        <a class="btn btn-primary" href="support.html">Написать в поддержку</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 Hawk Academy. ОГЭ-2027 — тренажёр для 9 класса.</p>
+      <ul>
+        <li><a href="support.html">Поддержка</a></li>
+        <li><a href="privacy.html">Политика конфиденциальности</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/try.js" defer></script>
+</body>
+</html>
