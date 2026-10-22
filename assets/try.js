@@ -1,9 +1,22 @@
-// Живое задание на главной: четыре задачи в формате ОГЭ, ответ в клетках бланка, разбор и 📏.
-// Язык берём из <html lang>: русская и английская версии главной.
+// Живое задание на главной: по одной задаче на каждый из семи предметов в формате ОГЭ,
+// ответ в клетках бланка, разбор и 📏. Язык берём из <html lang>: русская и английская версии главной.
 (function () {
   "use strict";
 
   var lang = document.documentElement.lang === "en" ? "en" : "ru";
+
+  // Карточки появляются, когда доезжают до экрана. Без JS и при Reduce Motion видны сразу.
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.documentElement.classList.add("has-reveal");
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        io.unobserve(entry.target);
+      });
+    }, { rootMargin: "0px 0px -6% 0px" });
+    Array.prototype.forEach.call(document.querySelectorAll(".reveal"), function (el) { io.observe(el); });
+  }
 
   var ru = {
     math: {
@@ -28,6 +41,17 @@
       ruler: "📏 В бланке слова основы пишут слитно, без пробелов: ВЕТЕРСТИХ.",
       spaced: "Слова верные, но в бланке ОГЭ их пишут слитно, без пробела. С пробелом ответ не засчитают."
     },
+    english: {
+      number: "Задание 29",
+      html: "<p>Преобразуйте слово, напечатанное заглавными буквами, так, чтобы оно грамматически и лексически соответствовало содержанию предложения.</p>" +
+        '<p lang="en"><b>This book is so ___ that I read it in one evening.</b> <span class="expr">INTEREST</span></p>',
+      cells: 11,
+      inputmode: "text",
+      hint: "Слово английскими буквами, без пробелов.",
+      answers: ["interesting"],
+      solution: "Нужно прилагательное от глагола interest: книга «вызывает интерес» → суффикс -ing: interesting. Interested — «заинтересованный» — говорят о человеке, а не о книге.",
+      ruler: "📏 В бланк пишут одно слово без пробелов: INTERESTING. Ошибка в одной букве — ответ не засчитают."
+    },
     geography: {
       number: "Задание 14",
       html: "<p>Какие два из перечисленных регионов России имеют выход к Каспийскому морю?</p>" +
@@ -50,6 +74,29 @@
       answers: ["177"],
       solution: "101101₂ = 32 + 8 + 4 + 1 = 45. 125₈ = 1·64 + 2·8 + 5 = 85. 2F₁₆ = 2·16 + 15 = 47. Сумма: 45 + 85 + 47 = 177.",
       ruler: "📏 В бланк — десятичное число без основания: 177, а не 177₁₀."
+    },
+    social: {
+      number: "Задание 13",
+      html: "<p>Что из перечисленного является конституционной обязанностью гражданина Российской Федерации?</p>" +
+        '<ol class="task-options"><li>1) участие в выборах</li><li>2) уплата законно установленных налогов и сборов</li>' +
+        "<li>3) вступление в политическую партию</li><li>4) получение высшего образования</li></ol>",
+      cells: 1,
+      inputmode: "numeric",
+      hint: "Одна цифра.",
+      answers: ["2"],
+      solution: "Конституционные обязанности: соблюдать Конституцию и законы, платить налоги, беречь природу, защищать Отечество, беречь культурное наследие, получить основное общее образование. Выборы, партия и высшее образование — права: ими пользуются по желанию.",
+      ruler: "📏 В бланк — только цифра ответа: 2. Без точки, скобки и слова «вариант»."
+    },
+    biology: {
+      number: "Задание 15",
+      html: "<p>Какое вещество в составе эритроцитов переносит кислород от лёгких к тканям?</p>" +
+        '<ol class="task-options"><li>1) инсулин</li><li>2) фибриноген</li><li>3) гемоглобин</li><li>4) хлорофилл</li></ol>',
+      cells: 1,
+      inputmode: "numeric",
+      hint: "Одна цифра.",
+      answers: ["3"],
+      solution: "Гемоглобин — белок эритроцитов с железом, он присоединяет кислород в лёгких и отдаёт его тканям. Инсулин — гормон поджелудочной железы, фибриноген отвечает за свёртывание крови, хлорофилл — пигмент растений.",
+      ruler: "📏 Одна цифра в бланк: 3. Название вещества писать не нужно."
     }
   };
 
@@ -77,6 +124,17 @@
       ruler: "📏 On the answer sheet the words are written together, with no space: ВЕТЕРСТИХ.",
       spaced: "The words are right, but on the OGE sheet they are written together, without a space. With a space the answer does not count."
     },
+    english: {
+      number: "Task 29",
+      html: "<p>Transform the word in capitals so that it fits the sentence grammatically and lexically.</p>" +
+        '<p><b>This book is so ___ that I read it in one evening.</b> <span class="expr">INTEREST</span></p>',
+      cells: 11,
+      inputmode: "text",
+      hint: "One word, no spaces.",
+      answers: ["interesting"],
+      solution: "An adjective is needed. The book causes interest, so the suffix is -ing: interesting. Interested describes a person, not a book.",
+      ruler: "📏 One word goes on the answer sheet: INTERESTING. A single wrong letter and the answer does not count."
+    },
     geography: {
       number: "Task 14",
       html: "<p>Which two of these regions of Russia border the Caspian Sea?</p>" +
@@ -99,6 +157,29 @@
       answers: ["177"],
       solution: "101101₂ = 32 + 8 + 4 + 1 = 45. 125₈ = 1·64 + 2·8 + 5 = 85. 2F₁₆ = 2·16 + 15 = 47. Sum: 45 + 85 + 47 = 177.",
       ruler: "📏 Write the decimal number without the base: 177, not 177₁₀."
+    },
+    social: {
+      number: "Task 13",
+      html: "<p>Which of the following is a constitutional duty of a citizen of the Russian Federation?</p>" +
+        '<ol class="task-options"><li>1) voting in elections</li><li>2) paying legally established taxes and fees</li>' +
+        "<li>3) joining a political party</li><li>4) getting a university degree</li></ol>",
+      cells: 1,
+      inputmode: "numeric",
+      hint: "One digit.",
+      answers: ["2"],
+      solution: "The Constitution lists the duties: obey the Constitution and the laws, pay taxes, protect nature, defend the country, preserve cultural heritage, finish basic general education. Voting, party membership and higher education are rights — you use them if you want to.",
+      ruler: "📏 Only the digit goes on the answer sheet: 2. No full stop, bracket or the word “option”."
+    },
+    biology: {
+      number: "Task 15",
+      html: "<p>Which substance in red blood cells carries oxygen from the lungs to the tissues?</p>" +
+        '<ol class="task-options"><li>1) insulin</li><li>2) fibrinogen</li><li>3) haemoglobin</li><li>4) chlorophyll</li></ol>',
+      cells: 1,
+      inputmode: "numeric",
+      hint: "One digit.",
+      answers: ["3"],
+      solution: "Haemoglobin is the iron-containing protein of red blood cells: it binds oxygen in the lungs and releases it in the tissues. Insulin is a pancreatic hormone, fibrinogen is for blood clotting, chlorophyll is a plant pigment.",
+      ruler: "📏 One digit on the answer sheet: 3. The name of the substance is not needed."
     }
   };
 
@@ -145,11 +226,15 @@
 
   function show(subject) {
     var t = tasks[subject];
+    if (!t) return;
     current = subject;
     tabs.forEach(function (tab) {
       var on = tab.getAttribute("data-subject") === subject;
       tab.setAttribute("aria-selected", on ? "true" : "false");
       tab.tabIndex = on ? 0 : -1;
+      if (on && tab.scrollIntoView) {
+        try { tab.scrollIntoView({ block: "nearest", inline: "nearest" }); } catch (e) { /* старый браузер */ }
+      }
     });
     document.getElementById("task").style.setProperty("--subject-color", "var(--" + subject + ")");
     numberEl.textContent = t.number;
